@@ -8,5 +8,8 @@ int main(void)
   if (n<0)
     print(n;" is negative")
 
+      if (n>0)
+	print(n;"is positive")
+
       return (0);
 }
