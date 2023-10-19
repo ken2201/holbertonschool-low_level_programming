@@ -1,17 +1,18 @@
 #include "main.h"
 
 /**
-  * _islower - Checks for lowercase character
-  * @c: The character to be checked
+  * print_numbers - Print the numbers since 0 up to 9
   *
-  * Return: 1 for lowercase character or 0 for anything else
+  * Return: The numbers since 0 up to 9
   */
-int _islower(int c)
+void print_numbers(void)
 {
-	if (c >= 97 && c <= 122)
+	int x;
+
+	for (x = 0; x <= 9; x++)
 	{
-		return (1);
+		_putchar(x + '0');
 	}
 
-	return (0);
+	_putchar('\n');
 }
