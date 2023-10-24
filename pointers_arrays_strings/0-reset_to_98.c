@@ -1,9 +1,10 @@
 #include "main.h"
 /**
-*point a variable
-*/
+ * Reaset_to_98 - uptdate the value
+ * point a variable
+ * @n: pointer variable
+ */
 void reset_to_98(int *n);
 {
-int *n = 98
-return n
+	*n = 98;
 }
