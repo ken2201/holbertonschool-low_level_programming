@@ -1,23 +1,30 @@
-include <stddef.h>
+#include "function_pointers.h"
 
 /**
- * int_index - a func that check an integ
- * @array: an integ array of size
- * @size: the size of array
- * @cmp: compare func to be used
- * Return: -1 on error
- */
-
+  * int_index - ...
+  * @array: ...
+  * @size: ...
+  * @cmp: ...
+  *
+  * Return: ...
+  */
 int int_index(int *array, int size, int (*cmp)(int))
 {
-	int i;
+	int i = 0;
 
-	if (array == NULL || cmp == NULL || size <= 0)
-		return (-1);
+	if (size > 0)
+	{
+		if (array != NULL && cmp != NULL)
+		{
+			while (i < size)
+			{
+				if (cmp(array[i]))
+					return (i);
 
-	for (i = 0; i < size; i++)
-		if (cmp(array[i]))
-			return (i);
+				i++;
+			}
+		}
+	}
 
 	return (-1);
 }
